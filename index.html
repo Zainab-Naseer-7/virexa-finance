@@ -1,0 +1,1804 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIREXA FINANCE — Intelligent Digital Banking & Wealth Management</title>
+  <meta name="description" content="Virexa Finance is the next-generation digital banking platform engineered for modern individuals and global enterprises. Experience intelligent multi-currency banking, institutional-grade security, automated investments, and real-time payments.">
+  <meta name="keywords" content="fintech, digital bank, wealth management, smart banking, multi-currency card, global payments, investment dashboard">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="VIREXA FINANCE — Finance, Reimagined for the Digital World">
+  <meta property="og:description" content="Move money, manage finances, and grow your wealth with an ultra-premium banking experience.">
+  <meta property="og:image" content="assets/og-virexa.png">
+  
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><rect width='40' height='40' rx='10' fill='%23080f24'/><path d='M11 11L20 28L29 11' stroke='%2306b6d4' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'/><circle cx='20' cy='15' r='3' fill='%233b82f6'/></svg>">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="components.css">
+  <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-inner">
+      <!-- Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Virexa Finance Home">
+        <div class="brand-emblem">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4l8 16 8-16"></path>
+            <circle cx="12" cy="9" r="2" fill="currentColor"></circle>
+          </svg>
+        </div>
+        <div>
+          VIREXA
+          <span class="brand-sub">FINANCE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#personal" class="nav-link">Personal</a></li>
+          <li><a href="#business" class="nav-link">Business</a></li>
+          <li><a href="#cards" class="nav-link">Cards</a></li>
+          <li><a href="#dashboard" class="nav-link">Dashboard</a></li>
+          <li><a href="#investments" class="nav-link">Investments</a></li>
+          <li><a href="#security" class="nav-link">Security</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Dark/Light Mode Switcher -->
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="btn btn-secondary btn-sm btn-open-login" id="navLoginBtn">Login</button>
+        <button class="btn btn-primary btn-sm btn-open-signup" id="navSignupBtn">Get Started</button>
+
+        <!-- Mobile Hamburger -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open Mobile Menu">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+  <aside class="mobile-menu-drawer" id="mobileMenuDrawer" aria-label="Mobile Navigation">
+    <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2.5rem;">
+        <div class="brand-logo">
+          <div class="brand-emblem">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M4 4l8 16 8-16"></path>
+            </svg>
+          </div>
+          <span>VIREXA</span>
+        </div>
+      </div>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 1.25rem;">
+        <li><a href="#personal" class="mobile-nav-link" style="font-size: 1.15rem; font-weight: 600;">Personal</a></li>
+        <li><a href="#business" class="mobile-nav-link" style="font-size: 1.15rem; font-weight: 600;">Business</a></li>
+        <li><a href="#cards" class="mobile-nav-link" style="font-size: 1.15rem; font-weight: 600;">Cards</a></li>
+        <li><a href="#dashboard" class="mobile-nav-link" style="font-size: 1.15rem; font-weight: 600;">Dashboard</a></li>
+        <li><a href="#investments" class="mobile-nav-link" style="font-size: 1.15rem; font-weight: 600;">Investments</a></li>
+        <li><a href="#security" class="mobile-nav-link" style="font-size: 1.15rem; font-weight: 600;">Security</a></li>
+        <li><a href="#pricing" class="mobile-nav-link" style="font-size: 1.15rem; font-weight: 600;">Pricing</a></li>
+      </ul>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 1rem;">
+      <button class="btn btn-secondary btn-open-login" style="width: 100%;">Login to Portal</button>
+      <button class="btn btn-primary btn-open-signup" style="width: 100%;">Create Account</button>
+    </div>
+  </aside>
+
+  <!-- =========================================================================
+       HERO SECTION
+       ========================================================================= -->
+  <main id="mainContent">
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Text Content -->
+          <div class="hero-content reveal-on-scroll">
+            <div class="hero-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <circle cx="12" cy="12" r="6"></circle>
+              </svg>
+              NEXT-GENERATION DIGITAL BANKING
+            </div>
+
+            <h1 class="hero-title">
+              Finance, <br>
+              <span class="gradient-text">Reimagined</span> for the Digital World.
+            </h1>
+
+            <p class="hero-subtitle">
+              Move money, manage your finances, and grow your wealth with a smarter financial experience built for the modern world.
+            </p>
+
+            <div class="hero-cta-group">
+              <button class="btn btn-primary btn-lg btn-open-signup" id="heroGetStartedBtn">
+                Get Started
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+              <a href="#dashboard" class="btn btn-secondary btn-lg" id="heroExploreBtn">
+                Explore Virexa
+              </a>
+            </div>
+
+            <!-- Trust Indicator Micro-strip -->
+            <div class="hero-trust-indicators">
+              <div class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                Bank-grade security
+              </div>
+              <span>•</span>
+              <div class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                Fast transactions
+              </div>
+              <span>•</span>
+              <div class="trust-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                Global access
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual 3D Stack Composition -->
+          <div class="hero-visual-wrapper reveal-on-scroll delay-200">
+            <div class="hero-composition">
+              <!-- Main Floating Balance Card -->
+              <div class="hero-card-main">
+                <div class="hero-card-header">
+                  <div>
+                    <span class="hero-balance-label">Total Liquid Balance</span>
+                    <div class="hero-balance-amount">
+                      $84,260.48
+                      <span class="hero-balance-growth">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                          <polyline points="18 15 12 9 6 15"></polyline>
+                        </svg>
+                        +14.2%
+                      </span>
+                    </div>
+                  </div>
+                  <div style="width: 38px; height: 38px; border-radius: 50%; background: rgba(59,130,246,0.15); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan);">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                      <line x1="2" y1="10" x2="22" y2="10"></line>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Mini Metallic Card Inset -->
+                <div class="hero-mini-card">
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <span style="font-size: 0.8rem; font-weight: 700; letter-spacing: 0.15em; color: var(--accent-cyan);">VIREXA BLACK</span>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.8">
+                      <path d="M12 2a10 10 0 0 0-4 18.9V19a8 8 0 1 1 8 0v1.9A10 10 0 0 0 12 2z"></path>
+                    </svg>
+                  </div>
+                  <div style="font-family: var(--font-mono); font-size: 1.15rem; letter-spacing: 0.2em; color: #ffffff; margin-bottom: 0.8rem;">
+                    •••• 4829
+                  </div>
+                  <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--text-muted);">
+                    <span>ALEXANDER VANCE</span>
+                    <span>11/28</span>
+                  </div>
+                </div>
+
+                <!-- Live Quick Action Badges -->
+                <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+                  <button class="btn btn-secondary btn-sm" style="flex: 1; padding: 0.45rem; font-size: 0.8rem; border-radius: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                    Send
+                  </button>
+                  <button class="btn btn-secondary btn-sm" style="flex: 1; padding: 0.45rem; font-size: 0.8rem; border-radius: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+                    Receive
+                  </button>
+                  <button class="btn btn-secondary btn-sm" style="flex: 1; padding: 0.45rem; font-size: 0.8rem; border-radius: 8px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    History
+                  </button>
+                </div>
+              </div>
+
+              <!-- Floating Real-Time Notification Pill -->
+              <div class="hero-notification-card">
+                <div class="hero-notification-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div style="font-size: 0.85rem; font-weight: 700; color: #ffffff;">+$1,250.00 Received</div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted);">SWIFT • Zurich Corp • Instant</div>
+                </div>
+              </div>
+
+              <!-- Floating Analytics Mini Card -->
+              <div class="hero-chart-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">PORTFOLIO GROWTH</span>
+                  <span style="font-size: 0.75rem; color: var(--color-success); font-weight: 700;">+24.8%</span>
+                </div>
+                <!-- Mini Glowing SVG Wave -->
+                <svg width="100%" height="45" viewBox="0 0 200 45" fill="none">
+                  <defs>
+                    <linearGradient id="miniChartGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.5"/>
+                      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 38 Q 40 10, 80 25 T 160 8 T 200 2 L 200 45 L 0 45 Z" fill="url(#miniChartGrad)"/>
+                  <path d="M0 38 Q 40 10, 80 25 T 160 8 T 200 2" stroke="#06b6d4" stroke-width="2.5" fill="none"/>
+                  <circle cx="200" cy="2" r="3.5" fill="#ffffff"/>
+                </svg>
+                <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem;">
+                  <span>Jan</span>
+                  <span>Mar</span>
+                  <span>May</span>
+                  <span>Aug</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         TRUST & STATS SECTION
+         ========================================================================= -->
+    <section class="trust-section" id="trustSection">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 2.5rem;">
+          <p style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent-cyan); font-weight: 700;">
+            Trusted technology for modern finance
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <!-- Stat 1 -->
+          <div class="stat-card reveal-on-scroll delay-100">
+            <div class="stat-number" data-target="2.4" data-suffix="M+" data-decimals="1">0</div>
+            <div class="stat-label">Active Users Worldwide</div>
+          </div>
+
+          <!-- Stat 2 -->
+          <div class="stat-card reveal-on-scroll delay-200">
+            <div class="stat-number" data-target="18" data-prefix="$" data-suffix="B+" data-decimals="0">0</div>
+            <div class="stat-label">Transactions Processed</div>
+          </div>
+
+          <!-- Stat 3 -->
+          <div class="stat-card reveal-on-scroll delay-300">
+            <div class="stat-number" data-target="99.99" data-suffix="%" data-decimals="2">0</div>
+            <div class="stat-label">Platform Reliability Uptime</div>
+          </div>
+
+          <!-- Stat 4 -->
+          <div class="stat-card reveal-on-scroll delay-400">
+            <div class="stat-number" data-target="150" data-suffix="+" data-decimals="0">0</div>
+            <div class="stat-label">Countries Supported</div>
+          </div>
+        </div>
+
+        <!-- Institutional Security Badges -->
+        <div class="compliance-strip">
+          <div class="compliance-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            SOC2 TYPE II CERTIFIED
+          </div>
+          <div class="compliance-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            256-BIT HARDWARE ENCRYPTION
+          </div>
+          <div class="compliance-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            ISO 27001 ACCREDITED
+          </div>
+          <div class="compliance-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            PCI-DSS LEVEL 1 COMPLIANT
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PERSONAL FINANCE SECTION
+         ========================================================================= -->
+    <section class="section" id="personal">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge">INTELLIGENT PERSONAL BANKING</span>
+          <h2 class="section-title">Everything you need to <span class="gradient-text">control your money</span>.</h2>
+          <p class="section-description">
+            Experience complete financial autonomy with intuitive tools designed to simplify your everyday transactions, smart budgeting, and cross-border agility.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Feature 1: Smart Banking -->
+          <div class="feature-card reveal-on-scroll delay-100">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Smart Banking</h3>
+            <p class="feature-desc">
+              Manage your money from one intelligent financial platform. Unified accounts, high-yield vaults, and frictionless liquid transfers.
+            </p>
+            <a href="#dashboard" class="feature-link">
+              Explore accounts
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Feature 2: Instant Transfers -->
+          <div class="feature-card reveal-on-scroll delay-200">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="feature-title">Instant Transfers</h3>
+            <p class="feature-desc">
+              Send and receive money quickly and securely. Domestic settlements in milliseconds, zero hidden currency markups.
+            </p>
+            <a href="#transactions" class="feature-link">
+              View transfer protocols
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Feature 3: Smart Spending -->
+          <div class="feature-card reveal-on-scroll delay-300">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Smart Spending</h3>
+            <p class="feature-desc">
+              Understand where your money goes with intelligent analytics. Real-time categorization, monthly spend pacing, and subscription audits.
+            </p>
+            <a href="#dashboard" class="feature-link">
+              Inspect spending tools
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Feature 4: Global Payments -->
+          <div class="feature-card reveal-on-scroll delay-100">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Global Payments</h3>
+            <p class="feature-desc">
+              Designed for modern international transactions. Transact across 150+ countries with interbank exchange rates and localized virtual IBANs.
+            </p>
+            <a href="#global" class="feature-link">
+              Explore global network
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Feature 5: Automated Savings -->
+          <div class="feature-card reveal-on-scroll delay-200">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-1.8.7-1.7.5-6.2-1-7.2z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Automated Savings</h3>
+            <p class="feature-desc">
+              Create smarter saving goals and track your progress. Automated transaction round-ups, recurring rules, and inflation-hedged yields.
+            </p>
+            <a href="#investments" class="feature-link">
+              Discover yield vaults
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+
+          <!-- Feature 6: Financial Insights -->
+          <div class="feature-card reveal-on-scroll delay-300">
+            <div class="feature-icon-box">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 20V10"></path>
+                <path d="M12 20V4"></path>
+                <path d="M6 20v-6"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Financial Insights</h3>
+            <p class="feature-desc">
+              Turn your financial activity into clear, useful insights. Predictive cash flow forecasting, net worth analysis, and algorithmic alerts.
+            </p>
+            <a href="#dashboard" class="feature-link">
+              See live insights
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PREMIUM CARD SECTION (3D INTERACTIVE TILT)
+         ========================================================================= -->
+    <section class="section card-showcase-section" id="cards">
+      <div class="container">
+        <div class="card-showcase-grid">
+          <!-- Left: Information & Tier Controls -->
+          <div class="reveal-on-scroll">
+            <span class="section-badge">ENGINEERED TITANIUM HARDWARE</span>
+            <h2 class="section-title">Pure metal. <br><span class="gradient-text">Zero compromises</span>.</h2>
+            <p class="section-description">
+              Precision-milled from aerospace-grade solid titanium. Contactless technology paired with biometrically secure virtual clones for instant global spending.
+            </p>
+
+            <!-- Tier Selectors -->
+            <div style="margin-top: 2rem;">
+              <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.85rem;">Select Finish:</span>
+              <div class="card-tier-selector">
+                <button class="tier-pill active" data-tier="obsidian">Obsidian Titanium</button>
+                <button class="tier-pill" data-tier="aurora">Aurora Teal</button>
+                <button class="tier-pill" data-tier="gold">Royal Founder Gold</button>
+              </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="card-feature-list">
+              <div class="card-feature-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+                <div>
+                  <h4 style="font-size: 1rem;">Instant payments</h4>
+                  <p style="font-size: 0.85rem;">Sub-second contactless NFC & Apple/Google Pay sync.</p>
+                </div>
+              </div>
+
+              <div class="card-feature-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                </svg>
+                <div>
+                  <h4 style="font-size: 1rem;">Worldwide acceptance</h4>
+                  <p style="font-size: 0.85rem;">Zero FX markup at over 60M merchants across the globe.</p>
+                </div>
+              </div>
+
+              <div class="card-feature-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                  <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                </svg>
+                <div>
+                  <h4 style="font-size: 1rem;">Real-time notifications</h4>
+                  <p style="font-size: 0.85rem;">Instant push notifications with geo-located receipts.</p>
+                </div>
+              </div>
+
+              <div class="card-feature-item">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <div>
+                  <h4 style="font-size: 1rem;">Advanced security</h4>
+                  <p style="font-size: 0.85rem;">One-tap instant card freezing and dynamic CVV generation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 2.5rem;">
+              <button class="btn btn-primary btn-open-signup">Request Metal Card</button>
+            </div>
+          </div>
+
+          <!-- Right: 3D Tilt Card Simulation Container -->
+          <div class="physical-card-container reveal-on-scroll delay-200" id="cardContainer">
+            <div class="virexa-credit-card obsidian" id="interactiveVirexaCard">
+              <div class="card-glare" id="cardGlare"></div>
+              
+              <!-- Card Top -->
+              <div class="card-top">
+                <div class="card-chip"></div>
+                <div class="card-contactless">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 8.5a9 9 0 0 1 14 0"></path>
+                    <path d="M8 12a5 5 0 0 1 8 0"></path>
+                    <path d="M11 15.5a1.5 1.5 0 0 1 2 0"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <!-- Card Middle: Embossed Number -->
+              <div>
+                <div class="card-number">5412 •••• •••• 9840</div>
+                <div class="card-tier-label" id="cardTierLabel">TITANIUM OBSIDIAN</div>
+              </div>
+
+              <!-- Card Bottom -->
+              <div class="card-bottom">
+                <div>
+                  <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.08em;">CARDHOLDER</div>
+                  <div class="card-holder-name">ALEXANDER VANCE</div>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 0.65rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.08em;">VALID THRU</div>
+                  <div class="card-expiry">08/30</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FINANCIAL DASHBOARD PREVIEW
+         ========================================================================= -->
+    <section class="section" id="dashboard">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge">INTELLIGENT COMMAND CENTER</span>
+          <h2 class="section-title">Your entire financial life. <br><span class="gradient-text">One intelligent dashboard</span>.</h2>
+          <p class="section-description">
+            Monitor real-time cash flows, automated recurring investments, category breakdowns, and performance trends with microsecond accuracy.
+          </p>
+        </div>
+
+        <div class="dashboard-preview-card reveal-on-scroll delay-100">
+          <!-- Topbar -->
+          <div class="dashboard-topbar">
+            <div class="dashboard-user-info">
+              <div class="dashboard-avatar">AV</div>
+              <div>
+                <div style="font-weight: 700; font-size: 1.1rem; color: var(--text-primary);">Alexander Vance</div>
+                <div style="font-size: 0.82rem; color: var(--accent-cyan);">Virexa Private Client • Account #VRX-9024</div>
+              </div>
+            </div>
+
+            <!-- Timeframe Filter Buttons -->
+            <div class="timeframe-filter">
+              <button class="timeframe-btn" data-timeframe="1W">1W</button>
+              <button class="timeframe-btn" data-timeframe="1M">1M</button>
+              <button class="timeframe-btn active" data-timeframe="6M">6M</button>
+              <button class="timeframe-btn" data-timeframe="1Y">1Y</button>
+            </div>
+          </div>
+
+          <!-- 4 Core Metrics Grid -->
+          <div class="dashboard-kpi-grid">
+            <!-- Total Balance -->
+            <div class="kpi-card">
+              <div class="kpi-label">Total Balance</div>
+              <div class="kpi-value">$84,260.48</div>
+              <div class="kpi-badge positive">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                +12.4% vs last period
+              </div>
+            </div>
+
+            <!-- Monthly Spending -->
+            <div class="kpi-card">
+              <div class="kpi-label">Monthly Spending</div>
+              <div class="kpi-value">$6,842.00</div>
+              <div class="kpi-badge negative">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                -4.1% below budget
+              </div>
+            </div>
+
+            <!-- Income -->
+            <div class="kpi-card">
+              <div class="kpi-label">Income</div>
+              <div class="kpi-value" style="color: var(--color-success);">+$12,480.00</div>
+              <div class="kpi-badge positive">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                +$2,100 salary bonus
+              </div>
+            </div>
+
+            <!-- Savings -->
+            <div class="kpi-card">
+              <div class="kpi-label">Savings Vaults</div>
+              <div class="kpi-value">$28,940.00</div>
+              <div class="kpi-badge positive">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                5.2% APY Compounded
+              </div>
+            </div>
+          </div>
+
+          <!-- Charts Layout -->
+          <div class="dashboard-charts-layout">
+            <!-- Left: Interactive Canvas Spline Chart -->
+            <div class="chart-box">
+              <div class="chart-header">
+                <div>
+                  <h4 style="font-size: 1.1rem; color: var(--text-primary);">Cash Flow Trends</h4>
+                  <div style="font-size: 0.8rem; color: var(--text-muted);">Real-time Income (Blue) vs. Spending (Cyan)</div>
+                </div>
+                <div style="display: flex; gap: 1rem; font-size: 0.8rem; font-weight: 600;">
+                  <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--accent-blue);">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-blue);"></span> Income
+                  </span>
+                  <span style="display: flex; align-items: center; gap: 0.4rem; color: var(--accent-cyan);">
+                    <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-cyan);"></span> Spending
+                  </span>
+                </div>
+              </div>
+              <div class="chart-canvas-wrapper">
+                <canvas id="dashboardSplineChart"></canvas>
+              </div>
+            </div>
+
+            <!-- Right: Category Breakdown & Savings Progress -->
+            <div class="chart-box" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h4 style="font-size: 1.1rem; margin-bottom: 0.25rem;">Category Allocation</h4>
+                <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1.25rem;">Top expenditure categories this month</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                  <!-- Category 1 -->
+                  <div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">
+                      <span>Business & Tech</span>
+                      <span>$2,840 (41%)</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden;">
+                      <div style="width: 41%; height: 100%; background: var(--accent-blue); border-radius: 4px;"></div>
+                    </div>
+                  </div>
+
+                  <!-- Category 2 -->
+                  <div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">
+                      <span>Global Travel & Logistics</span>
+                      <span>$1,950 (28%)</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden;">
+                      <div style="width: 28%; height: 100%; background: var(--accent-cyan); border-radius: 4px;"></div>
+                    </div>
+                  </div>
+
+                  <!-- Category 3 -->
+                  <div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">
+                      <span>Living & Lifestyle</span>
+                      <span>$1,320 (19%)</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden;">
+                      <div style="width: 19%; height: 100%; background: var(--accent-violet); border-radius: 4px;"></div>
+                    </div>
+                  </div>
+
+                  <!-- Category 4 -->
+                  <div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.35rem;">
+                      <span>Investments & Vaults</span>
+                      <span>$732 (12%)</span>
+                    </div>
+                    <div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden;">
+                      <div style="width: 12%; height: 100%; background: var(--color-success); border-radius: 4px;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Savings Vault Target Meter -->
+              <div style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-subtle); border-radius: 12px; padding: 1rem; margin-top: 1.5rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span style="font-size: 0.85rem; font-weight: 700; color: var(--text-primary);">Emergency Reserve Vault</span>
+                  <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-success);">82% of $35k goal</span>
+                </div>
+                <div style="height: 6px; background: rgba(255,255,255,0.06); border-radius: 4px; overflow: hidden;">
+                  <div style="width: 82%; height: 100%; background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan)); border-radius: 4px;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         TRANSACTIONS SECTION
+         ========================================================================= -->
+    <section class="section transactions-section" id="transactions">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge">REAL-TIME LEDGER</span>
+          <h2 class="section-title">Transparent <span class="gradient-text">transactions</span>.</h2>
+          <p class="section-description">
+            Inspect every single inflow and outflow with high-resolution merchant records, automated tax tagging, and live settlement indicators.
+          </p>
+        </div>
+
+        <!-- Controls: Filters & Search Input -->
+        <div class="transaction-controls reveal-on-scroll delay-100">
+          <div class="filter-pills">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="income">Income</button>
+            <button class="filter-btn" data-filter="expenses">Expenses</button>
+            <button class="filter-btn" data-filter="transfers">Transfers</button>
+          </div>
+
+          <div class="transaction-search-input">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="transactionSearchInput" placeholder="Search merchant, category...">
+          </div>
+        </div>
+
+        <!-- Transaction List Render Container -->
+        <div class="transaction-list-card reveal-on-scroll delay-200">
+          <div id="transactionRowsContainer">
+            <!-- Rendered by transactions.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         INVESTMENT SECTION
+         ========================================================================= -->
+    <section class="section" id="investments">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge">WEALTH & PORTFOLIO ENGINE</span>
+          <h2 class="section-title">Make your money <span class="gradient-text">work smarter</span>.</h2>
+          <p class="section-description">
+            Build diversified multi-asset portfolios with institutional access. High-grade treasury bonds, curated global equity indices, and decentralized yield protocols.
+          </p>
+        </div>
+
+        <div class="investment-grid">
+          <!-- Investment Chart & Overview Card -->
+          <div class="investment-chart-card reveal-on-scroll delay-100">
+            <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <span style="font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em;">Total Managed Portfolio</span>
+                <div style="font-size: 2.5rem; font-weight: 800; font-family: var(--font-heading); color: var(--text-primary);">
+                  $142,850.20
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: 0.5rem; background: var(--color-success-bg); color: var(--color-success); padding: 0.4rem 1rem; border-radius: var(--border-radius-pill); font-weight: 700; font-size: 0.95rem;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                +18.4% YTD Growth
+              </div>
+            </div>
+
+            <!-- Asset Allocation Breakdown Bars -->
+            <div>
+              <h4 style="font-size: 1.05rem; margin-bottom: 1.25rem;">Asset Allocation & Risk Weighting</h4>
+              <div class="asset-allocation-list">
+                <!-- Stocks -->
+                <div class="asset-bar-item">
+                  <div class="asset-bar-header">
+                    <span>Global Equities & Tech (Stocks)</span>
+                    <span style="color: var(--accent-blue); font-family: var(--font-mono);">$64,282.59 (45%)</span>
+                  </div>
+                  <div class="asset-progress-track">
+                    <div class="asset-progress-fill" style="width: 45%; background: var(--accent-blue);"></div>
+                  </div>
+                </div>
+
+                <!-- ETFs -->
+                <div class="asset-bar-item">
+                  <div class="asset-bar-header">
+                    <span>Curated Index Funds (ETFs)</span>
+                    <span style="color: var(--accent-cyan); font-family: var(--font-mono);">$42,855.06 (30%)</span>
+                  </div>
+                  <div class="asset-progress-track">
+                    <div class="asset-progress-fill" style="width: 30%; background: var(--accent-cyan);"></div>
+                  </div>
+                </div>
+
+                <!-- Bonds -->
+                <div class="asset-bar-item">
+                  <div class="asset-bar-header">
+                    <span>Sovereign & Corporate Bonds</span>
+                    <span style="color: var(--accent-violet); font-family: var(--font-mono);">$21,427.53 (15%)</span>
+                  </div>
+                  <div class="asset-progress-track">
+                    <div class="asset-progress-fill" style="width: 15%; background: var(--accent-violet);"></div>
+                  </div>
+                </div>
+
+                <!-- Digital Assets -->
+                <div class="asset-bar-item">
+                  <div class="asset-bar-header">
+                    <span>Tokenized Gold & Digital Assets</span>
+                    <span style="color: #fbbf24; font-family: var(--font-mono);">$14,285.02 (10%)</span>
+                  </div>
+                  <div class="asset-progress-track">
+                    <div class="asset-progress-fill" style="width: 10%; background: #fbbf24;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Market Overview Tickers -->
+          <div class="reveal-on-scroll delay-200">
+            <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem;">Live Market Tickers</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+              Direct market feeds updated continuously via institutional pricing gateways.
+            </p>
+
+            <div class="market-tickers-grid">
+              <div class="ticker-card">
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">S&P 500 ESG INDEX</div>
+                <div style="font-size: 1.35rem; font-weight: 700; margin: 0.25rem 0;">5,648.40</div>
+                <span style="color: var(--color-success); font-size: 0.82rem; font-weight: 600;">▲ +0.84%</span>
+              </div>
+
+              <div class="ticker-card">
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">NASDAQ COMPOSITE</div>
+                <div style="font-size: 1.35rem; font-weight: 700; margin: 0.25rem 0;">17,882.15</div>
+                <span style="color: var(--color-success); font-size: 0.82rem; font-weight: 600;">▲ +1.12%</span>
+              </div>
+
+              <div class="ticker-card">
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">US 10Y TREASURY YIELD</div>
+                <div style="font-size: 1.35rem; font-weight: 700; margin: 0.25rem 0;">3.86%</div>
+                <span style="color: var(--color-danger); font-size: 0.82rem; font-weight: 600;">▼ -0.04%</span>
+              </div>
+
+              <div class="ticker-card">
+                <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 600;">PHYSICAL GOLD OUNCE</div>
+                <div style="font-size: 1.35rem; font-weight: 700; margin: 0.25rem 0;">$2,504.80</div>
+                <span style="color: var(--color-success); font-size: 0.82rem; font-weight: 600;">▲ +0.45%</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <button class="btn btn-primary btn-open-signup" style="width: 100%;">
+                Open Virexa Wealth Account
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECURITY SECTION
+         ========================================================================= -->
+    <section class="section" id="security">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge">ZERO-TRUST ARCHITECTURE</span>
+          <h2 class="section-title">Security built into <span class="gradient-text">every transaction</span>.</h2>
+          <p class="section-description">
+            Your wealth is guarded by military-grade cryptographic standards, automated threat detection models, and biometric authorization fences.
+          </p>
+        </div>
+
+        <div class="security-showcase">
+          <!-- Left: 4 Security Cards -->
+          <div class="security-cards-grid reveal-on-scroll delay-100">
+            <!-- Security 1 -->
+            <div class="security-card">
+              <div style="color: var(--accent-cyan); margin-bottom: 1rem;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">End-to-End Protection</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                Advanced security architecture designed to protect financial activity with AES-256 and asymmetric quantum-safe key distribution.
+              </p>
+            </div>
+
+            <!-- Security 2 -->
+            <div class="security-card">
+              <div style="color: var(--accent-cyan); margin-bottom: 1rem;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Real-Time Monitoring</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                Transactions are continuously monitored for suspicious activity using predictive neural networks with microsecond auto-quarantine.
+              </p>
+            </div>
+
+            <!-- Security 3 -->
+            <div class="security-card">
+              <div style="color: var(--accent-cyan); margin-bottom: 1rem;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Secure Authentication</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                Modern authentication and account protection with FIDO2 passkeys, hardware security keys, and biometric zero-knowledge proofs.
+              </p>
+            </div>
+
+            <!-- Security 4 -->
+            <div class="security-card">
+              <div style="color: var(--accent-cyan); margin-bottom: 1rem;">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 16v-4"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem;">Privacy First</h3>
+              <p style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+                Your financial information is handled with strong privacy controls. We never monetize, sell, or expose your transactional telemetry.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Visual Rotating Radar & Live Cipher Stream -->
+          <div class="security-shield-visual reveal-on-scroll delay-200">
+            <div class="shield-ring shield-ring-1"></div>
+            <div class="shield-ring shield-ring-2"></div>
+            <div class="shield-core">
+              <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+            </div>
+
+            <!-- Floating Cipher Pill -->
+            <div style="position: absolute; bottom: 15px; background: rgba(8,15,36,0.9); border: 1px solid var(--border-subtle); border-radius: var(--border-radius-pill); padding: 0.5rem 1.25rem; font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan); box-shadow: 0 10px 25px rgba(0,0,0,0.5);">
+              <span>CIPHER_SHA384: </span>
+              <span id="cipherStream">4A89BF719E028CD3E5F901B</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         BUSINESS FINANCE SECTION
+         ========================================================================= -->
+    <section class="section" id="business">
+      <div class="container">
+        <div class="business-grid">
+          <div class="reveal-on-scroll">
+            <span class="section-badge">COMMERCIAL & ENTERPRISE SUITE</span>
+            <h2 class="section-title">Power your business with <span class="gradient-text">smarter finance</span>.</h2>
+            <p class="section-description">
+              Streamline enterprise treasury, dispatch smart team cards with automated spend limits, issue real-time multi-currency invoices, and automate bookkeeping.
+            </p>
+
+            <div class="business-checklist">
+              <div class="checklist-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="checklist-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Business accounts & multi-entity management</strong> across jurisdictions.</span>
+              </div>
+              <div class="checklist-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="checklist-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Team cards with granular category budgets</strong> and auto-receipt matching.</span>
+              </div>
+              <div class="checklist-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="checklist-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Global invoicing and automated payment reconciliation</strong> with QuickBooks/Xero.</span>
+              </div>
+              <div class="checklist-item">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="checklist-icon"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Multi-tier approval workflows & RBAC</strong> permissions for finance controllers.</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-open-signup">Explore Business Banking</button>
+          </div>
+
+          <!-- Business Dashboard Showcase Card -->
+          <div class="glass-card reveal-on-scroll delay-200" style="padding: 2.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="width: 38px; height: 38px; border-radius: 8px; background: rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; color: var(--accent-blue); font-weight: 700;">
+                  AC
+                </div>
+                <div>
+                  <div style="font-weight: 700; color: var(--text-primary);">AeroCorp International LLC</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Commercial Treasury • 42 Active Cards</div>
+                </div>
+              </div>
+              <span class="status-badge status-completed">Active Entity</span>
+            </div>
+
+            <!-- Mini stats row -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Operating Cash</div>
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--text-primary);">$418,920.00</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-subtle); border-radius: 10px; padding: 1rem;">
+                <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Monthly Team Spend</div>
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--accent-cyan);">$52,140.00</div>
+              </div>
+            </div>
+
+            <!-- Invoices List -->
+            <div>
+              <div style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--text-secondary);">Recent Outgoing Invoices</div>
+              <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(255,255,255,0.02); border-radius: 8px; font-size: 0.85rem;">
+                  <div>
+                    <div style="font-weight: 600;">INV-2024-884 • Cloudflare Edge</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Due in 14 days</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div style="font-weight: 700;">$14,200.00</div>
+                    <span style="color: var(--color-success); font-size: 0.75rem;">Sent</span>
+                  </div>
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; background: rgba(255,255,255,0.02); border-radius: 8px; font-size: 0.85rem;">
+                  <div>
+                    <div style="font-weight: 600;">INV-2024-885 • Tokyo Robotics Inc</div>
+                    <div style="font-size: 0.75rem; color: var(--text-muted);">Paid via SWIFT</div>
+                  </div>
+                  <div style="text-align: right;">
+                    <div style="font-weight: 700;">$32,450.00</div>
+                    <span style="color: var(--accent-cyan); font-size: 0.75rem;">Settled</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         GLOBAL PAYMENTS SECTION
+         ========================================================================= -->
+    <section class="section" id="global">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge">INTERPLANETARY SETTLEMENT</span>
+          <h2 class="section-title">Move money across borders <br><span class="gradient-text">with confidence</span>.</h2>
+          <p class="section-description">
+            High-speed liquidity routing across key financial capitals with live institutional FX rates and zero SWIFT wire delays.
+          </p>
+        </div>
+
+        <!-- Stylized World Map Visual -->
+        <div class="global-map-container reveal-on-scroll delay-100">
+          <svg class="global-map-svg" viewBox="0 0 1000 450" fill="none">
+            <!-- Simplified abstract continent outlines -->
+            <path d="M150 120 Q 200 80, 280 110 T 320 180 T 260 260 T 170 200 Z" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.15)"/>
+            <path d="M420 100 Q 520 70, 580 120 T 540 220 T 450 200 Z" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.15)"/>
+            <path d="M640 90 Q 780 70, 850 140 T 800 240 T 670 190 Z" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.15)"/>
+            <path d="M720 280 Q 820 260, 860 330 T 750 380 Z" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.15)"/>
+            <path d="M220 270 Q 280 270, 270 370 T 200 350 Z" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.15)"/>
+
+            <!-- Inter-City Connection Arcs -->
+            <!-- NYC to London -->
+            <path d="M250 160 Q 370 80, 480 130" stroke="url(#mapArcGrad)" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+            <!-- London to Dubai -->
+            <path d="M480 130 Q 550 150, 610 200" stroke="url(#mapArcGrad)" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+            <!-- Dubai to Singapore -->
+            <path d="M610 200 Q 680 220, 740 250" stroke="url(#mapArcGrad)" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+            <!-- Singapore to Tokyo -->
+            <path d="M740 250 Q 780 190, 820 160" stroke="url(#mapArcGrad)" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+            <!-- Singapore to Sydney -->
+            <path d="M740 250 Q 780 300, 810 340" stroke="url(#mapArcGrad)" stroke-width="2" stroke-dasharray="4 4" fill="none"/>
+
+            <defs>
+              <linearGradient id="mapArcGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#3b82f6"/>
+                <stop offset="50%" stop-color="#06b6d4"/>
+                <stop offset="100%" stop-color="#8b5cf6"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <!-- 6 Financial Hub Pins -->
+          <!-- New York -->
+          <div class="map-hub-pin" style="top: 35%; left: 25%;">
+            <div class="pin-pulse"></div>
+            <span class="pin-label">New York</span>
+          </div>
+
+          <!-- London -->
+          <div class="map-hub-pin" style="top: 29%; left: 48%;">
+            <div class="pin-pulse"></div>
+            <span class="pin-label">London</span>
+          </div>
+
+          <!-- Dubai -->
+          <div class="map-hub-pin" style="top: 44%; left: 61%;">
+            <div class="pin-pulse"></div>
+            <span class="pin-label">Dubai</span>
+          </div>
+
+          <!-- Singapore -->
+          <div class="map-hub-pin" style="top: 55%; left: 74%;">
+            <div class="pin-pulse"></div>
+            <span class="pin-label">Singapore</span>
+          </div>
+
+          <!-- Tokyo -->
+          <div class="map-hub-pin" style="top: 35%; left: 82%;">
+            <div class="pin-pulse"></div>
+            <span class="pin-label">Tokyo</span>
+          </div>
+
+          <!-- Sydney -->
+          <div class="map-hub-pin" style="top: 75%; left: 81%;">
+            <div class="pin-pulse"></div>
+            <span class="pin-label">Sydney</span>
+          </div>
+        </div>
+
+        <!-- Real-Time Currency Rate Cards -->
+        <div class="currency-rates-strip reveal-on-scroll delay-200">
+          <div class="currency-card">
+            <div class="currency-code">USD / EUR</div>
+            <div class="currency-rate">€0.9204</div>
+            <span style="font-size: 0.75rem; color: var(--color-success);">+0.14%</span>
+          </div>
+          <div class="currency-card">
+            <div class="currency-code">USD / GBP</div>
+            <div class="currency-rate">£0.7915</div>
+            <span style="font-size: 0.75rem; color: var(--color-success);">+0.08%</span>
+          </div>
+          <div class="currency-card">
+            <div class="currency-code">USD / AED</div>
+            <div class="currency-rate">د.إ3.6725</div>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Fixed</span>
+          </div>
+          <div class="currency-card">
+            <div class="currency-code">USD / JPY</div>
+            <div class="currency-rate">¥154.20</div>
+            <span style="font-size: 0.75rem; color: var(--color-danger);">-0.32%</span>
+          </div>
+          <div class="currency-card">
+            <div class="currency-code">EUR / GBP</div>
+            <div class="currency-rate">£0.8598</div>
+            <span style="font-size: 0.75rem; color: var(--color-success);">+0.05%</span>
+          </div>
+        </div>
+
+        <!-- Interactive Currency Converter Tool -->
+        <div class="glass-card reveal-on-scroll delay-300" style="max-width: 680px; margin: 3rem auto 0 auto; padding: 2rem;">
+          <h4 style="font-size: 1.15rem; text-align: center; margin-bottom: 1.25rem;">Live Institutional Currency Converter</h4>
+          <div style="display: grid; grid-template-columns: 2fr 1.2fr 1.2fr; gap: 1rem; align-items: center;">
+            <div>
+              <label style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">Amount</label>
+              <input type="number" id="currencyAmountInput" value="5000" class="form-input" style="width: 100%; margin-top: 0.25rem;">
+            </div>
+            <div>
+              <label style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">From</label>
+              <select id="currencySourceSelect" class="form-input" style="width: 100%; margin-top: 0.25rem;">
+                <option value="USD" selected>USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="AED">AED (د.إ)</option>
+                <option value="JPY">JPY (¥)</option>
+              </select>
+            </div>
+            <div>
+              <label style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase;">To</label>
+              <select id="currencyTargetSelect" class="form-input" style="width: 100%; margin-top: 0.25rem;">
+                <option value="EUR" selected>EUR (€)</option>
+                <option value="USD">USD ($)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="AED">AED (د.إ)</option>
+                <option value="JPY">JPY (¥)</option>
+              </select>
+            </div>
+          </div>
+
+          <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+            <div>
+              <div style="font-size: 0.8rem; color: var(--text-muted);">Estimated Converted Result:</div>
+              <div id="convertedResultDisplay" style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-heading); color: var(--accent-cyan);">
+                4,602.00 EUR
+              </div>
+            </div>
+            <button class="btn btn-primary btn-sm btn-open-signup">Transfer at Interbank Rate</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         PRICING SECTION
+         ========================================================================= -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge">TRANSPARENT PLANS</span>
+          <h2 class="section-title">Engineered for <span class="gradient-text">every scale</span>.</h2>
+          <p class="section-description">
+            No surprise fees. No hidden spreads. Choose the plan that aligns with your wealth velocity.
+          </p>
+        </div>
+
+        <!-- Monthly / Yearly Billing Toggle -->
+        <div class="pricing-toggle-wrap reveal-on-scroll delay-100">
+          <span style="font-weight: 600; font-size: 0.95rem;">Billed Monthly</span>
+          <div class="pricing-switch" id="pricingSwitch" role="switch" aria-checked="false">
+            <div class="switch-thumb"></div>
+          </div>
+          <span style="font-weight: 600; font-size: 0.95rem;">Billed Annually</span>
+          <span class="discount-badge">SAVE 20%</span>
+        </div>
+
+        <!-- Pricing Cards Grid -->
+        <div class="pricing-cards-grid">
+          <!-- Essential Plan -->
+          <div class="pricing-card reveal-on-scroll delay-100">
+            <h3 style="font-size: 1.45rem;">Essential</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem;">
+              For everyday financial management and global spending.
+            </p>
+
+            <div class="plan-price-wrap">
+              <span class="plan-price">$<span class="plan-price-val" data-monthly="0" data-yearly="0">0</span></span>
+              <span class="plan-period plan-period-val">/month</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Free virtual Virexa debit card</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Zero domestic transfer fees</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Spend in 30+ currencies with interbank rate</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Standard mobile & web dashboard</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-secondary btn-open-signup" style="width: 100%;">Get Started Free</button>
+          </div>
+
+          <!-- Pro Plan (Popular) -->
+          <div class="pricing-card popular reveal-on-scroll delay-200">
+            <span class="popular-badge">MOST POPULAR</span>
+            <h3 style="font-size: 1.45rem;">Pro</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem;">
+              For advanced personal finance, investing, and luxury travel.
+            </p>
+
+            <div class="plan-price-wrap">
+              <span class="plan-price">$<span class="plan-price-val" data-monthly="12" data-yearly="9.60">12</span></span>
+              <span class="plan-period plan-period-val">/month</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Solid Titanium Metal Card</strong> included</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>5.2% APY on automated savings vaults</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Unlimited zero-fee SWIFT international wires</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Comprehensive investment engine & stock access</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>VIP 24/7 dedicated wealth concierge</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-primary btn-open-signup" style="width: 100%;">Upgrade to Pro</button>
+          </div>
+
+          <!-- Business Plan -->
+          <div class="pricing-card reveal-on-scroll delay-300">
+            <h3 style="font-size: 1.45rem;">Business</h3>
+            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem;">
+              For growing businesses, startups, and international teams.
+            </p>
+
+            <div class="plan-price-wrap">
+              <span class="plan-price">$<span class="plan-price-val" data-monthly="39" data-yearly="31.20">39</span></span>
+              <span class="plan-period plan-period-val">/month</span>
+            </div>
+
+            <ul class="pricing-features-list">
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Up to 25 physical & unlimited virtual corporate cards</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Multi-tier approval workflows & RBAC</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>API access & automated ERP reconciliation</span>
+              </li>
+              <li class="pricing-feature-item">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Dedicated institutional account manager</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-secondary btn-open-signup" style="width: 100%;">Deploy Business Banking</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         TESTIMONIALS SECTION
+         ========================================================================= -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge">VERIFIED CLIENT ENDORSEMENTS</span>
+          <h2 class="section-title">Trusted by global <span class="gradient-text">finance leaders</span>.</h2>
+          <p class="section-description">
+            Read authentic reviews from global operators, founders, and private wealth managers managing their capital with Virexa.
+          </p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card reveal-on-scroll delay-100">
+            <div>
+              <div class="testimonial-stars">
+                ★★★★★
+              </div>
+              <p class="testimonial-quote" style="margin-top: 1rem;">
+                “Virexa replaced three separate platforms for our corporate group. We handle global supplier wires in seconds with zero friction and pristine accounting integration.”
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff;">
+                EM
+              </div>
+              <div>
+                <div class="author-name">Elena Rostova</div>
+                <div class="author-role">Chief Financial Officer • Apex Mobility</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card reveal-on-scroll delay-200">
+            <div>
+              <div class="testimonial-stars">
+                ★★★★★
+              </div>
+              <p class="testimonial-quote" style="margin-top: 1rem;">
+                “The Titanium card is an engineering masterpiece, but the software is what truly sets Virexa apart. The 3D dashboard analytics give me immediate clarity on my wealth velocity.”
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #06b6d4, #14b8a6); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff;">
+                DK
+              </div>
+              <div>
+                <div class="author-name">David K. Chen</div>
+                <div class="author-role">Founding Partner • Horizon Ventures</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card reveal-on-scroll delay-300">
+            <div>
+              <div class="testimonial-stars">
+                ★★★★★
+              </div>
+              <p class="testimonial-quote" style="margin-top: 1rem;">
+                “Living across London, Singapore, and New York used to mean excessive foreign exchange gouging. With Virexa's multi-currency accounts, I save tens of thousands every year.”
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background: linear-gradient(135deg, #8b5cf6, #6366f1); display: flex; align-items: center; justify-content: center; font-weight: 700; color: #fff;">
+                SL
+              </div>
+              <div>
+                <div class="author-name">Sophie Laurent</div>
+                <div class="author-role">Global Architect & Investor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FAQ SECTION
+         ========================================================================= -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header reveal-on-scroll">
+          <span class="section-badge">FREQUENTLY ASKED QUESTIONS</span>
+          <h2 class="section-title">Everything you <span class="gradient-text">need to know</span>.</h2>
+          <p class="section-description">
+            Find answers regarding security compliance, settlement speeds, international eligibility, and account operations.
+          </p>
+        </div>
+
+        <div class="faq-container reveal-on-scroll delay-100">
+          <!-- Question 1 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How secure is Virexa?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Virexa utilizes end-to-end 256-bit hardware encryption, SOC2 Type II compliance, and zero-knowledge biometric authentication. Customer balances are held in segregated, bankruptcy-remote custodial accounts at tier-1 regulated banking institutions, providing statutory deposit insurance coverage up to eligible limits.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How quickly are transfers processed?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Transfers between Virexa users settle instantly (sub-second). Domestic transfers via SEPA Instant, FedNow, and Faster Payments clear within seconds. International cross-border SWIFT transfers typically settle within minutes or same-day depending on destination correspondent banking corridors.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Where is Virexa available?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Virexa is currently available to verified residents and incorporated commercial entities across the United States, United Kingdom, European Economic Area (EEA), United Arab Emirates, Singapore, Japan, and Australia, with ongoing expansions across 150+ supported settlement jurisdictions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are there account fees?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                The Virexa Essential account carries $0 monthly maintenance fees, zero minimum balance penalties, and free virtual card issuance. Premium tiers like Pro ($12/mo) and Business ($39/mo) offer enhanced privileges including physical titanium cards, premium APY yield rates, and dedicated institutional wealth concierges.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can businesses use Virexa?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Virexa Business is purpose-built for corporations, venture-backed tech companies, and multinational teams. We offer team cards with dynamic spend controls, multi-tier approval authorizations, automated payroll execution, and direct API endpoints for custom enterprise ERP sync.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How does card security work?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Physical Virexa metal cards do not display printed CVV numbers or sensitive details. Instead, you generate disposable dynamic CVVs through our secure mobile application. You can instantly freeze or unfreeze your card with a single tap, customize merchant-level spending ceilings, and disable magnetic stripe transactions on demand.
+              </p>
+            </div>
+          </div>
+
+          <!-- Question 7 -->
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I manage multiple currencies?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. Every Virexa account allows you to hold, convert, and transact across 35+ national currencies simultaneously under a unified digital account. You receive unique local account numbers (IBAN, Sort Code, Routing Number) for USD, EUR, GBP, AED, and JPY.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         FINAL CALL TO ACTION
+         ========================================================================= -->
+    <section class="final-cta-section">
+      <div class="container">
+        <div class="final-cta-card reveal-on-scroll">
+          <h2 class="cta-headline">
+            Your money deserves a <span class="gradient-text">better experience</span>.
+          </h2>
+          <p class="cta-subtext">
+            Join the next generation of digital finance. Open your account in under 3 minutes with zero paperwork.
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 1.25rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-lg btn-open-signup">Create Your Account</button>
+            <button class="btn btn-secondary btn-lg btn-open-login">Talk to Our Team</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="brand-emblem">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M4 4l8 16 8-16"></path>
+                <circle cx="12" cy="9" r="2" fill="currentColor"></circle>
+              </svg>
+            </div>
+            <div>
+              VIREXA
+              <span class="brand-sub">FINANCE</span>
+            </div>
+          </div>
+          <p>
+            The world-class digital banking and wealth platform designed for global citizens and high-velocity enterprises.
+          </p>
+          <div class="newsletter-form">
+            <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-secondary);">Subscribe to Virexa Intelligence:</span>
+            <form id="newsletterForm" class="newsletter-input-group">
+              <input type="email" placeholder="Enter your work email" required>
+              <button type="submit" class="btn btn-primary btn-sm">Join</button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Col 2: Product -->
+        <div class="footer-col">
+          <h5>Product</h5>
+          <ul class="footer-links">
+            <li><a href="#personal" class="footer-link">Personal Banking</a></li>
+            <li><a href="#business" class="footer-link">Business Banking</a></li>
+            <li><a href="#cards" class="footer-link">Titanium Cards</a></li>
+            <li><a href="#global" class="footer-link">Global Payments</a></li>
+            <li><a href="#investments" class="footer-link">Wealth & Investments</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Company -->
+        <div class="footer-col">
+          <h5>Company</h5>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">About Virexa</a></li>
+            <li><a href="#hero" class="footer-link">Careers <span style="font-size: 0.7rem; background: rgba(59,130,246,0.2); color: var(--accent-cyan); padding: 0.1rem 0.4rem; border-radius: 4px;">WE'RE HIRING</span></a></li>
+            <li><a href="#hero" class="footer-link">Press & Media</a></li>
+            <li><a href="#hero" class="footer-link">Leadership & Governance</a></li>
+            <li><a href="#hero" class="footer-link">Contact Relations</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Resources -->
+        <div class="footer-col">
+          <h5>Resources</h5>
+          <ul class="footer-links">
+            <li><a href="#faq" class="footer-link">Help Center</a></li>
+            <li><a href="#security" class="footer-link">Security Architecture</a></li>
+            <li><a href="#dashboard" class="footer-link">Developer Documentation</a></li>
+            <li><a href="#faq" class="footer-link">Platform Status</a></li>
+            <li><a href="#pricing" class="footer-link">Pricing Transparency</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 5: Legal -->
+        <div class="footer-col">
+          <h5>Legal & Compliance</h5>
+          <ul class="footer-links">
+            <li><a href="#hero" class="footer-link">Privacy Policy</a></li>
+            <li><a href="#hero" class="footer-link">Terms of Service</a></li>
+            <li><a href="#hero" class="footer-link">Cookie Preferences</a></li>
+            <li><a href="#security" class="footer-link">Regulatory Disclosures</a></li>
+            <li><a href="#security" class="footer-link">Anti-Money Laundering</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2026 VIREXA FINANCE INC. All rights reserved. Banking services powered by partner member FDIC / PRA chartered institutions.
+        </div>
+
+        <div class="social-links">
+          <a href="#hero" class="social-btn" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+          </a>
+          <a href="#hero" class="social-btn" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          </a>
+          <a href="#hero" class="social-btn" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & DIALOGS
+       ========================================================================= -->
+  <div class="modal-overlay" id="modalOverlay">
+    <!-- Login Modal -->
+    <div class="modal-container modal-content-box" id="loginModal" style="display: none;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="brand-logo" style="justify-content: center; margin-bottom: 0.5rem;">
+          <div class="brand-emblem" style="width: 32px; height: 32px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4l8 16 8-16"></path></svg>
+          </div>
+          <span>VIREXA</span>
+        </div>
+        <h3 style="font-size: 1.5rem; margin-top: 0.5rem;">Client Portal Sign In</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Access your private banking dashboard</p>
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email or Account ID</label>
+          <input type="text" id="loginEmail" class="form-input" placeholder="name@virexa.com" required>
+        </div>
+
+        <div class="form-group">
+          <div style="display: flex; justify-content: space-between;">
+            <label class="form-label" for="loginPassword">Password</label>
+            <a href="#hero" style="font-size: 0.8rem; color: var(--accent-cyan);">Forgot?</a>
+          </div>
+          <input type="password" id="loginPassword" class="form-input" placeholder="••••••••••••" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+          Authenticate Securely
+        </button>
+      </form>
+
+      <div style="margin-top: 1.5rem; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+        Don't have a Virexa account? <a href="#" class="btn-open-signup" style="color: var(--accent-cyan); font-weight: 600;">Create one here</a>
+      </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal-container modal-content-box" id="signupModal" style="display: none;">
+      <button class="modal-close-btn" aria-label="Close modal">✕</button>
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <div class="brand-logo" style="justify-content: center; margin-bottom: 0.5rem;">
+          <div class="brand-emblem" style="width: 32px; height: 32px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4l8 16 8-16"></path></svg>
+          </div>
+          <span>VIREXA</span>
+        </div>
+        <h3 style="font-size: 1.5rem; margin-top: 0.5rem;">Open Your Virexa Account</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">Start your digital banking experience in minutes</p>
+      </div>
+
+      <form id="signupForm">
+        <div class="form-group">
+          <label class="form-label" for="regFullName">Full Legal Name</label>
+          <input type="text" id="regFullName" class="form-input" placeholder="Alexander Vance" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regEmail">Email Address</label>
+          <input type="email" id="regEmail" class="form-input" placeholder="alexander@domain.com" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regPlan">Account Selection</label>
+          <select id="regPlan" class="form-input">
+            <option value="essential">Virexa Essential ($0/mo)</option>
+            <option value="pro" selected>Virexa Pro with Titanium Card ($12/mo)</option>
+            <option value="business">Virexa Corporate Treasury ($39/mo)</option>
+          </select>
+        </div>
+
+        <div style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+          By continuing, you agree to the Virexa Electronic Banking Disclosures, Privacy Policy, and Patriot Act identity verification.
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">
+          Create Account & Claim Card
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Scripts -->
+  <script src="theme.js"></script>
+  <script src="charts.js"></script>
+  <script src="card-tilt.js"></script>
+  <script src="transactions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
